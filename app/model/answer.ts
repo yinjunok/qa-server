@@ -10,7 +10,18 @@ export default (app: Application) => {
       autoIncrement: true,
       comment: '主键',
     },
-    
+    author_id: {
+      type: INTEGER.UNSIGNED,
+      comment: '作者 id'
+    },
+    vote_up_amount: {
+      type: INTEGER.UNSIGNED,
+      comment: '赞同数量'
+    },
+    comment_amount: {
+      type: INTEGER.UNSIGNED,
+      comment: '评论数量'
+    }
   });
 
   return Answer;
