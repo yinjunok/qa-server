@@ -2,7 +2,7 @@ import { Application } from 'egg';
 
 export default (app: Application) => {
   const { INTEGER } = app.Sequelize;
-  
+
   const Answer = app.model.define('user', {
     id: {
       type: INTEGER.UNSIGNED,
@@ -12,17 +12,17 @@ export default (app: Application) => {
     },
     author_id: {
       type: INTEGER.UNSIGNED,
-      comment: '作者 id'
+      comment: '作者 id',
     },
-    vote_up_amount: {
+    vote_up_number: {
       type: INTEGER.UNSIGNED,
-      comment: '赞同数量'
+      comment: '赞同数量',
     },
-    comment_amount: {
+    comment_number: {
       type: INTEGER.UNSIGNED,
-      comment: '评论数量'
-    }
+      comment: '评论数量',
+    },
   });
 
   return Answer;
-}
+};

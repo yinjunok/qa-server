@@ -1,19 +1,23 @@
 import { Application } from 'egg';
 
 export default (app: Application) => {
-  const { INTEGER } = app.Sequelize;
-  
+  const { INTEGER, TINYINT } = app.Sequelize;
+
   const UserRelation = app.model.define('user', {
-    user_id: {
+    uid: {
       type: INTEGER.UNSIGNED,
       primaryKey: true,
     },
-    follow_uid: {
+    relation_uid: {
       type: INTEGER.UNSIGNED,
       primaryKey: true,
-      comment: '关注用户的 id'
-    }
+      comment: '另一个人的 id',
+    },
+    relationship: {
+      type: TINYINT.UNSIGNED,
+      comment: '没有记录的双方是路人, 0 关注, 1 黑名单',
+    },
   });
 
   return UserRelation;
-}
+};

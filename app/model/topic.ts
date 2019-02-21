@@ -2,7 +2,7 @@ import { Application } from 'egg';
 
 export default (app: Application) => {
   const { INTEGER, STRING, TEXT } = app.Sequelize;
-  
+
   const Topic = app.model.define('user', {
     id: {
       type: INTEGER.UNSIGNED,
@@ -19,17 +19,17 @@ export default (app: Application) => {
     },
     desc: {
       type: TEXT,
-      comment: '话题描述'
+      comment: '话题描述',
     },
-    followers_amount: {
+    followers_number: {
       type: INTEGER.UNSIGNED,
-      comment: '关注者'
+      comment: '关注者',
     },
-    questions_amount: {
+    questions_number: {
       type: INTEGER.UNSIGNED,
-      comment: '问题数量'
-    }
+      comment: '问题数量',
+    },
   });
 
   return Topic;
-}
+};
