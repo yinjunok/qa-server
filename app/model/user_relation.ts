@@ -3,7 +3,7 @@ import { Application } from 'egg';
 export default (app: Application) => {
   const { INTEGER, TINYINT } = app.Sequelize;
 
-  const UserRelation = app.model.define('user', {
+  const UserRelation = app.model.define('user_relation', {
     uid: {
       type: INTEGER.UNSIGNED,
       primaryKey: true,

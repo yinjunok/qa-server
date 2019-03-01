@@ -31,3 +31,8 @@ $ npm start
 
 - Node.js 8.x
 - Typescript 2.8+
+
+
+文档地址 
+数据库: https://eggjs.org/zh-cn/tutorials/sequelize.html
+

@@ -15,6 +15,20 @@ export default (appInfo: EggAppInfo) => {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
   };
 
+  config.sequelize = {
+    username: 'root',
+    password: 'local_password:127.0.0.1',
+    database: 'qa_development_database',
+    host: '127.0.0.1',
+    dialect: 'mysql',
+  };
+
+  config.security = {
+    csrf: {
+      enable: false,
+      },
+  };
+
   // the return config will combines to EggAppConfig
   return {
     ...config,

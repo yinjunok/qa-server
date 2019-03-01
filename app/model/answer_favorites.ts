@@ -4,7 +4,7 @@ import { Application } from 'egg';
 export default (app: Application) => {
   const { INTEGER } = app.Sequelize;
 
-  const AnswerFavorites = app.model.define('user', {
+  const AnswerFavorites = app.model.define('answer_favorites', {
     favorites_id: {
       type: INTEGER.UNSIGNED,
       primaryKey: true,

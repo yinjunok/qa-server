@@ -3,7 +3,7 @@ import { Application } from 'egg';
 export default (app: Application) => {
   const { INTEGER, STRING, TEXT } = app.Sequelize;
 
-  const Topic = app.model.define('user', {
+  const Topic = app.model.define('topic', {
     id: {
       type: INTEGER.UNSIGNED,
       primaryKey: true,
