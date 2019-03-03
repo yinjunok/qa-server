@@ -36,3 +36,6 @@ $ npm start
 文档地址 
 数据库: https://eggjs.org/zh-cn/tutorials/sequelize.html
 
+```bash
+docker run --name dev-mysql --restart=always -e MYSQL_ROOT_PASSWORD=local_password:127.0.0.1 -p 3306:3306 -d mysql:5 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+```
